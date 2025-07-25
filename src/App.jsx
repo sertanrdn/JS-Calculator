@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Buttons from './components/Buttons';
+import Button from './components/Button';
 import Display from './components/Display';
 import { buttons } from './buttons.js';
 import { Parser } from 'expr-eval';
@@ -66,7 +66,7 @@ function App() {
         <Display value={input} />
         <div className="buttons">
           {buttons.map(({ id, label }) => (
-            <Buttons key={id} id={id} label={label} onClick={handleClick} />
+            <Button key={id} id={id} label={label} onClick={handleClick} />
           ))}
         </div>
       </div>

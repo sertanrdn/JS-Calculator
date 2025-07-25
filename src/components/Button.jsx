@@ -1,4 +1,4 @@
-const Buttons = ({ id, label, onClick }) => {
+const Button = ({ id, label, onClick }) => {
     return (
         <button id={id} className="button" onClick={() => onClick(label)}>
           {label}
@@ -6,4 +6,4 @@ const Buttons = ({ id, label, onClick }) => {
     );
 }
 
-export default Buttons;
+export default Button;
