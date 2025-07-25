@@ -64,7 +64,7 @@ function App() {
   return (
       <div className="calculator">
         <Display value={input} />
-        <div className="buttons">
+        <div className='buttons-grid'>
           {buttons.map(({ id, label }) => (
             <Button key={id} id={id} label={label} onClick={handleClick} />
           ))}

@@ -1,8 +1,11 @@
 .button {
-    font-size: 25px;
+    width: 100%;
+    font-size: 1.5rem;
     background-color: #fff;
     border: none;
     cursor: pointer;
-    padding: 20px;
     transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
