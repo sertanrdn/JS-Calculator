@@ -23,22 +23,22 @@
 }
 
 /* Highlight =, 0, or C if needed (optional) */
-.button#equals,
-.button#clear,
-.button#zero {
+#equals,
+#clear,
+#zero {
   background-color: tomato;
 }
 
-.button#zero, .button#clear {
+#zero, #clear {
   grid-column: span 2;
 }
 
-.button#equals {
+#equals {
   grid-row: span 2;
 }
 
 /* Hover effect */
 .button:hover {
-  background-color: #440b15;
+  background-color: #f8b6b6;
   color: #fff;
 }
