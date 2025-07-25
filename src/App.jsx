@@ -2,11 +2,14 @@ import { useState } from 'react';
 import Buttons from './components/Buttons';
 import Display from './components/Display';
 import { buttons } from './buttons.js';
+import { Parser } from 'expr-eval';
 import './App.css';
+
+const parser = new Parser();
 
 function App() {
   const [input, setInput] = useState("0");
-  const [evaluated, setEvaluated] = useState(false);
+  const [evaluated, setEvaluated] = useState(false);  
 
   const isOperator = /[+\-*/]/;
 
@@ -16,7 +19,8 @@ function App() {
       setEvaluated(false);
     } else if (val === "=") {
       try {
-        const result = eval(input.replace(/--/g, "+")).toString();
+        const expression = input.replace(/--/g, "+");
+        const result = parser.evaluate(expression).toString();
         setInput(result);
         setEvaluated(true);
       } catch {
