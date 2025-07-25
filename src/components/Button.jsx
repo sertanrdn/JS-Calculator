@@ -1,3 +1,5 @@
+import './Button.css';
+
 const Button = ({ id, label, onClick }) => {
     return (
         <button id={id} className="button" onClick={() => onClick(label)}>
